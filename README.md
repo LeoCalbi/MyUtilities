@@ -33,7 +33,7 @@ Execute:
 
 ```powershell
 $ModuleFolder = ($Env:PSModulePath | Split-String -Separator ";")[0]
-git clone https://github.com/LeoCalbi/myUtilities.git $ModuleFolder
+git clone https://github.com/LeoCalbi/myUtilities.git "$ModuleFolder/MyUtilities"
 ```
 
 Then add to your Powershell Profile (Path at `$Profile`):
