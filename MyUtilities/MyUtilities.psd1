@@ -24,10 +24,10 @@
     Author            = 'Leonardo Calbi'
 
     # Company or vendor of this module
-    CompanyName       = 'Unknown'
+    # CompanyName       = 'Unknown'
 
     # Copyright statement for this module
-    Copyright         = '(c) Leonardo Calbi. All rights reserved.'
+    Copyright         = '(c) 2021 Leonardo Calbi. All rights reserved.'
 
     # Description of the functionality provided by this module
     Description       = 'PowerShell module that contains all my utility functions.'
@@ -68,18 +68,18 @@
     # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 
     NestedModules     = @(
-        'char.psm1',
-        'chocolatey.psm1',
-        'command.psm1',
-        'environment.psm1',
-        'filesystem.psm1',
-        'module.psm1',
-        'navigation.psm1',
-        'network.psm1',
-        'process.psm1',
-        'pwsh.psm1',
-        'system.psm1',
-        'wt.psm1'
+        'Public/char.psm1',
+        'Public/chocolatey.psm1',
+        'Public/command.psm1',
+        'Public/environment.psm1',
+        'Public/filesystem.psm1',
+        'Public/module.psm1',
+        'Public/navigation.psm1',
+        'Public/network.psm1',
+        'Public/process.psm1',
+        'Public/pwsh.psm1',
+        'Public/system.psm1',
+        'Public/wt.psm1'
     )
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
@@ -109,13 +109,13 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @("Powershell", "Utility")
+            Tags = @("Windows", "PSEdition_Core", "Powershell", "Utility")
 
             # A URL to the license for this module.
-            # LicenseUri = ''
+            LicenseUri = 'https://github.com/LeoCalbi/myUtilities/blob/main/LICENSE'
 
             # A URL to the main website for this project.
-            # ProjectUri = ''
+            ProjectUri = 'https://github.com/LeoCalbi/myUtilities'
 
             # A URL to an icon representing this module.
             # IconUri = ''
