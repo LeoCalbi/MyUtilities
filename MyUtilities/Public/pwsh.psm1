@@ -14,8 +14,6 @@
 
 #                               Aliases
 # -----------------------------------------------------------------------------
-Set-Alias -Name "reloadpwsh" -Value Update-PowershellProfile -Description "Reload Powershell Profile"
-
 Set-Alias -Name "ep" -Value Edit-PowershellProfile -Description "Edit files in the powershell profile directory"
 
 Set-Alias -Name "eph" -Value Edit-PowershellProfile -Description "Edit files in the powershell profile directory"
@@ -36,20 +34,4 @@ function Edit-PowershellProfile {
     [CmdletBinding()]
     param()
     Edit-Item (Split-Path -Path $PROFILE)
-}
-
-function Update-PowershellProfile {
-    <#
-    .SYNOPSIS
-        Reload the powershell profile.
-    .INPUTS
-        None
-    .OUTPUTS
-        None
-    .LINK
-        pwsh
-    #>
-    [CmdletBinding()]
-    param()
-    & $PROFILE
 }
