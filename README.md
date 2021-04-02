@@ -1,4 +1,4 @@
-# myUtilities
+# MyUtilities
 
 PowerShell Module that contains a collection of personal and gathered ease of life functions.
 
@@ -22,19 +22,19 @@ The module manifest [MyUtilites.psd1](1.0.0/MyUtilities.psd1) imports submodules
 
 ## :tada: Installation
 
-
 ### With my Dotfiles
 
-The complete use of this module alongside others is managed by my personal [Dotfile configuration](https://github.com/LeoCalbi/dotfiles) managed with [Chezmoi](https://www.chezmoi.io/)
+The complete use of this module alongside others is managed by my personal [Dotfile configuration](https://github.com/LeoCalbi/dotfiles) managed with [Chezmoi](https://www.chezmoi.io/).
 
-### With git and Powershell Core
+### With git
 
 Execute:
 
 ```powershell
-git clone https://github.com/LeoCalbi/myUtilities.git
+git clone https://github.com/LeoCalbi/MyUtilities.git
 $ModuleFolder = ($Env:PSModulePath | Split-String -Separator ";")[0]
-Move-Item -Path myUtilities\MyUtilities -Destination $ModuleFolder
+Move-Item -Path MyUtilities\MyUtilities -Destination $ModuleFolder
+Remove-Variable -Name "ModuleFolder"
 ```
 
 Then add to your Powershell Profile (Path at `$Profile`):
