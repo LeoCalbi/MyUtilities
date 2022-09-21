@@ -45,3 +45,22 @@ function Test-Administrator {
   param()
   return (New-Object Security.Principal.WindowsPrincipal ([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 }
+
+function Test-System {
+  <#
+  .SYNOPSIS
+      Check and fix system files.
+  .OUTPUTS
+      System.String
+  .LINK
+      DISM, SFC
+  #>
+  [CmdletBinding()]
+  param()
+  Write-Host "$(Get-Date) - DISM /Online /Cleanup-Image /StartComponentCleanup" -NoNewLine -ForegroundColor yellow
+  DISM /Online /Cleanup-Image /StartComponentCleanup
+  Write-Host "$(Get-Date) - DISM /Online /Cleanup-Image /RestoreHealth" -NoNewLine -ForegroundColor yellow
+  DISM /Online /Cleanup-Image /RestoreHealth
+  Write-Host "$(Get-Date) - SFC /scannow" -NoNewLine -ForegroundColor yellow
+  SFC /scannow
+}
