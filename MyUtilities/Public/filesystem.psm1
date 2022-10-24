@@ -41,7 +41,6 @@ Set-Alias -Name "touch" -Value New-File -Description "Creates an empty file or u
 #                               Functions
 # -----------------------------------------------------------------------------
 
-$global:editor = 'code.cmd'
 Function New-Dir {
     <#
     .SYNOPSIS
@@ -159,7 +158,7 @@ function Edit-Item {
         )]
         [string]$Item
     )
-    & $editor -g $Item
+    & $ENV:EDITOR -g $Item
 }
 
 Function Find-FileRegex {
